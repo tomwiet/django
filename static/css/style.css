@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro');
+.w3-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.w3-courgette {
+  font-family: 'Courgette', cursive;
+}
+
+body {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  color: #8a909b;
+}
+
+.post-title{
+  text-decoration: none;
+}
