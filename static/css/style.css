@@ -19,6 +19,7 @@ body {
 .post-title{
   text-decoration: none;
   color: #ffffff;
+  font-size: 16px;
 }
 
 a.post-title : visited {
