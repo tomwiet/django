@@ -6,7 +6,8 @@
         <h1>{{ post.title }}</h1>
         <p class="w3-margin w3-padding">{{ post.text|linebreaksbr }}</p>
 
-
+        <a class="w3-btn w3-right w3-indigo w3-margin" href="{% url 'post_remove' pk=post.pk %}"><span>Usuń</span></a>
+        <a class="w3-btn w3-right w3-indigo w3-margin" href="{% url 'post_edit' pk=post.pk %}"><span>Edycja</span></a>
         {% if post.published_date %}
             <div class="w3-left">
                 {{ post.published_date }}
@@ -14,6 +15,7 @@
         {% else %}
         <a class="w3-btn w3-right w3-indigo w3-margin" href="{% url 'post_publish' pk=post.pk %}">Opublikuj</a>
         {% endif %}
-        <a class="w3-btn w3-right w3-indigo w3-margin" href="{% url 'post_edit' pk=post.pk %}"><span>Edycja</span></a>
+
+
     </div>
 {% endblock %}
