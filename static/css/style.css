@@ -18,4 +18,11 @@ body {
 
 .post-title{
   text-decoration: none;
+  color: #ffffff;
+}
+
+a.post-title : visited {
+
+color: #ffffff;
+
 }
