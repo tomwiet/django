@@ -9,15 +9,27 @@
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 <div class="w3-container w3-center w3-indigo">
     <h1><a class="w3-courgette w3-jumbo" href="/" style="text-decoration: none">Blog w Django</a></h1>
-    {% if user.is_authenticated %}
-    <a class="w3-right w3-margin" href="{% url 'post_new' %}"><span class="material-icons" style="font-size:48px; color: #06004f">add_circle</span></a>
-    <a class="w3-right w3-margin" href="{% url 'post_draft_list' %}"><span class="material-icons" style="font-size:48px; color: #06004f">mode_edit</span></a>
-    {% endif %}
+</div>
+<div class="w3-panel">
+  {% if user.is_authenticated %}
+            <a class="w3-right w3-margin" href="{% url 'post_new' %}">
+              <span class="fa fa-plus-square-o" style="font-size:48px; color: #06004f"></span>
+            </a>
+            <a class="w3-right w3-margin" href="{% url 'post_draft_list' %}">
+              <span class="fa fa-pencil-square-o" style="font-size:48px; color: #06004f"></span>
+            </a>
+            <p>Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+    {% else %}
+            <a class="w3-right w3-margin" href="{% url 'login' %}">
+              <span class="fa fa-sign-in" style="font-size:48px; color: #06004f"></span>
+            </a>
+  {% endif %}
 </div>
 
   {% block content %}

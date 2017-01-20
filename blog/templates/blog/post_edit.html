@@ -4,6 +4,7 @@
     <h1>New post</h1>
     <form method="POST" class="w3-container">{% csrf_token %}
         {{ form.as_p }}
-        <button  class="w3-btn w3-indigo" type="submit">Save</button>
+        <a class="w3-btn w3-indigo w3-right w3-margin" href="{% url 'post_draft_list' %}">Anuluj</a>
+        <button  class="w3-btn w3-indigo w3-right w3-margin" type="submit">Save</button>
     </form>
 {% endblock %}

@@ -22,6 +22,12 @@ body {
   font-size: 28px;
 }
 
+.draft-post-title{
+  text-decoration: none;
+  color: #aaaaaaa;
+  font-size: 28px;
+}
+
 a.post-title : visited {
 
 color: #ffffff;
